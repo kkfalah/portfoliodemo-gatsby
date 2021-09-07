@@ -1,6 +1,6 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 
 <h1 align="center">
-  Gatsby's sample project
+  Sample Gatsby's App
 </h1>
 

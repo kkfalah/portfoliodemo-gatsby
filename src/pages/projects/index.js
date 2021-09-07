@@ -13,7 +13,7 @@ export default function Projects({data}) {
       <h3>Projects and Websites</h3>
       <div className={styles.projects}>
         {projects.map(project=>(
-          <Link to={"/projects"+project.frontmatter.slug} key={project.id}>
+          <Link to={"/projects/"+project.frontmatter.slug} key={project.id}>
             <Img fluid={project.frontmatter.thumb.childImageSharp.fluid}  />
             <h3>{ project.frontmatter.title}</h3>
             <p>{project.frontmatter.stack}</p>

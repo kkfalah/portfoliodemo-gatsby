@@ -3,11 +3,16 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import * as styles from '../../styles/projects.module.css'
 import Img from 'gatsby-image'
+import { Helmet } from 'react-helmet'
 
 export default function Projects({data}) {
   const projects = data.allMarkdownRemark.nodes
   return (
     <Layout>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <title>Projects | WebZaa</title>
+    </Helmet>
     <div className={styles.portfolio}>
       <h2>Portfolio</h2>
       <h3>Projects and Websites</h3>

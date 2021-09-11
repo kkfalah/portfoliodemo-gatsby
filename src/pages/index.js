@@ -7,7 +7,7 @@ import Img from "gatsby-image"
 export default function Home({data}) {
   
   return (
-      <Layout>
+    <Layout>
     <section className={styles.header}>
       <div>
         <h2>Design</h2>

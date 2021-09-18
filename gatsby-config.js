@@ -10,6 +10,7 @@ module.exports = {
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    `gatsby-plugin-image`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -30,5 +31,6 @@ module.exports = {
     title: 'WebZaa',
     description: 'web development portfolio',
     copyright: 'All rights reserved - 2021',
-  }
+  },
+  pathPrefix: "/portfoliodemo-gatsby",
 }

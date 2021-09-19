@@ -6,6 +6,7 @@
 
 module.exports = {
   /* Your site config here */
+  pathPrefix: `/portfoliodemo-gatsby`,
   plugins: [
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
@@ -31,6 +32,5 @@ module.exports = {
     title: 'WebZaa',
     description: 'web development portfolio',
     copyright: 'All rights reserved - 2021',
-  },
-  pathPrefix: "/portfoliodemo-gatsby",
+  }
 }

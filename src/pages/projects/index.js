@@ -4,6 +4,7 @@ import Layout from '../../components/Layout'
 import * as styles from '../../styles/projects.module.css'
 import { Helmet } from 'react-helmet'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import { Container, Row, Col } from 'react-bootstrap'
 
 export default function Projects({data}) {
   const projects = data.allMarkdownRemark.nodes
@@ -13,19 +14,25 @@ export default function Projects({data}) {
         <meta charSet="utf-8" />
         <title>Projects | WebZaa</title>
     </Helmet>
-    <div className={styles.portfolio}>
-      <h2>Portfolio</h2>
-      <h3>Projects and Websites</h3>
-      <div className={styles.projects}>
-        {projects.map(project=>(
-          <Link to={"/projects/"+project.frontmatter.slug} key={project.id}>
-            <GatsbyImage image={project.frontmatter.thumb.childImageSharp.gatsbyImageData} alt={project.frontmatter.title} />
-            <h3>{project.frontmatter.title}</h3>
-            <p>{project.frontmatter.stack}</p>
-          </Link>
-        ))}
-      </div>
-    </div>
+    <Container fluid>
+        <div className={styles.portfolio}>
+          <h2>Portfolio</h2>
+          <h3>Projects and Websites</h3>
+          <div className={styles.projects}>
+      <Row>
+            {projects.map(project=>(
+              <Col md="4" sm="6">
+              <Link to={"/projects/"+project.frontmatter.slug} key={project.id}>
+                <GatsbyImage image={project.frontmatter.thumb.childImageSharp.gatsbyImageData} alt={project.frontmatter.title} />
+                <h3>{project.frontmatter.title}</h3>
+                <p>{project.frontmatter.stack}</p>
+              </Link>
+              </Col>
+            ))}
+      </Row>
+          </div>
+        </div>
+    </Container>
     </Layout>
   )
 }

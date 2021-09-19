@@ -3,17 +3,22 @@
 }
 .portfolio > h2 {
   font-size: 3em;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 .portfolio > h3 {
   font-size: 2em;
   font-weight: 400;
 }
 .projects {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 80px;
-  margin: 80px 20px;
+  grid-gap: 80px; */
+  margin: 50px 15px;
+}
+.projects a {
+  margin: 20px 5px;
+  text-decoration: none;
+  display: block;
 }
 .projects h3 {
   text-align: center;

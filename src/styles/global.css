@@ -19,29 +19,30 @@ p {
   line-height: 1.5em;
 }
 
+
 /* layout & nav */
 .layout {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
 }
 nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 40px auto;
+  margin: 30px auto;
 }
 nav .links {
-  display: inline-block;
-  text-align: right;
+  display: inherit;
 }
-nav a {
-  display: inline-block;
-  margin-left: 20px;
-  font-weight: 400;
+nav .links a {
+  display: block;
   padding-bottom: 8px;
+  font-weight: 400;
   border-bottom: 3px solid transparent;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 8px;
 }
-nav a:hover {
+nav .links a:hover {
   border-color: white;
+  color: #fff;
 }
 footer p{
   text-align: center;

@@ -1,9 +1,10 @@
 import React from 'react'
 import Layout from "../components/Layout"
-import Img from 'gatsby-image'
 import * as styles from "../styles/project-details.module.css"
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
+import { Container } from 'react-bootstrap'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 export default function ProjectDetails({ data }) {
   const { html } = data.markdownRemark
@@ -14,14 +15,16 @@ export default function ProjectDetails({ data }) {
           <meta charSet="utf-8" />
           <title>{title} | WebZaa</title>
       </Helmet>
+      <Container>
       <div className={styles.details}>
         <h2>{title}</h2>
         <h3>{stack}</h3>
         <div className={styles.featured}>
-          <Img fluid={featuredImg.childImageSharp.fluid} />
+          <GatsbyImage image={featuredImg.childImageSharp.gatsbyImageData} alt={title} />
         </div>
         <div className={styles.html} dangerouslySetInnerHTML={{ __html: html}} />
       </div>
+      </Container>
     </Layout>
   )
 }
@@ -35,9 +38,7 @@ query ProjectDetails($slug: String) {
       title
       featuredImg {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }

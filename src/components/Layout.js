@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import Navbar from './Navbar'
+import Header from './Header'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/global.css'
 
 export default function Layout({ children }) {
@@ -10,14 +11,13 @@ export default function Layout({ children }) {
           <meta charSet="utf-8" />
           <title>WebZaa</title>
       </Helmet>
-      <Navbar />
+      <Header />
       <div className="content">
         { children }
       </div>
       <footer>
         <p>Copy right - WebZaa</p>
       </footer>
-
     </div>
   )
 }
